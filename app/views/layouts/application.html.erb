@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <title>デビルマスター</title>
+    <%= stylesheet_link_tag    "application" %>
+    <%= stylesheet_link_tag    "http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.css" %>
+    <%= javascript_include_tag "http://code.jquery.com/jquery-1.6.4.js" %>
+    <%= javascript_include_tag "http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.js" %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <div data-role="page">
+      <%= yield %>
+    </div>
+  </body>
+</html>
