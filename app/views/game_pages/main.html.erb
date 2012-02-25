@@ -1,7 +1,17 @@
 <div data-role="header">
   <h1>メイン画面</h1>
 </div>
+<div align="center">
+名前：<%= @player.name %>
+<br>
+レベル：<%= @player.level %>
+</div>
 <div data-role="controlgroup">
-  <%= link_to "バトルを開始",   battle_select_path, {"data-role" => "button", "data-transition" => "slide"} %>
-  <%= link_to "クエストを開始", "#",                {"data-role" => "button", "data-transition" => "slide"} %>
+  <%= link_to "バトルを開始",
+    {"action" => "battle_select", "player" => @player.id},
+    {"data-role" => "button", "data-transition" => "slide"}
+  %>
+  <%= link_to "クエストを開始", "#",
+    {"data-role" => "button", "data-transition" => "slide"}
+  %>
 </div>

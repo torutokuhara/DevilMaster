@@ -1,21 +1,19 @@
-<% content_for :meta_includes do %>
-  <meta http-equiv="refresh" content="5;url=<%= battle_result_path %>">
-<% end %>
-<% content_for :javascript_includes do %>
-  <%= javascript_include_tag("animate") %>
-<% end %>
-
 <div data-role="header">
   <h1>バトル</h1>
-  <%= link_to "スキップ", battle_result_path, {"data-icon" => "arrow-r", "data-transition" => "slide", "class" => "ui-btn-right"} %>
+  <%= link_to "スキップ",
+    {"action" => "battle_result", "player" => @player.id, "card_player" => @card_player.id, "card_opponent" => @card_opponent.id, "result" => @result},
+    {"data-icon" => "arrow-r", "data-transition" => "slide", "class" => "ui-btn-right"}
+  %>
 </div>
 
-<div id="img_l", style="position:relative", align="left">
-  <%= image_tag("001.jpg") %>
+<br>
+<div id="img_l", style="position:relative", align="center">
+  <%= image_tag(@card_player.image) %>
 </div>
 <div id="text", style="position:relative", align="center">
-  <b>vs</b>
+  <b>対<b>
 </div>
-<div id="img_r", style="position:relative", align="right">
-  <%= image_tag("002.jpg") %>
+<div id="img_r", style="position:relative", align="center">
+  <%= image_tag(@card_opponent.image) %>
 </div>
+

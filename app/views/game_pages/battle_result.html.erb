@@ -5,9 +5,15 @@
 
 <div style="position:relative", align="center">
   <br>
-  <%= image_tag("001.jpg") %>
+  <%= image_tag(@card_player.image) %>
 </div>
 <br>
 <div style="text-align:center">
-  <big><b>勝利！</b><big>
+  <big><b>
+    <% if @result == "win" %>
+      勝利！
+    <% else %>
+      負け！
+    <% end %>
+    </b><big>
 </div>

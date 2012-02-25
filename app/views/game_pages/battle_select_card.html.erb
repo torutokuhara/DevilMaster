@@ -5,11 +5,11 @@
 <ul data-role="listview" data-theme="c">
   <% @cards.each do |card| %>
     <li>
-    <a href=<%= battle_path %> id=<%= card.id %>>
-      <%= image_tag(card.image) %>
-      <h3><%= card.name %></h3>
-    </a>
+    <%= link_to raw("#{image_tag(card.image)}<h3>#{card.name}</h3>"),
+      {"action" => "battle", "player" => @player.id, "card_player" => card.id, "card_opponent" => 3}
+    %>
     </li>
   <% end %>
 </ul>
+
 
