@@ -1,13 +1,15 @@
 Devilmaster::Application.routes.draw do
   resources :players
 
+  match '/start',                 to: 'game_pages#start'
   match '/main',                  to: 'game_pages#main'
   match '/battle_select',         to: 'game_pages#battle_select'
   match '/battle_select_bylevel', to: 'game_pages#battle_select_bylevel'
+  match '/battle_select_card',    to: 'game_pages#battle_select_card'
   match '/battle',                to: 'game_pages#battle'
   match '/battle_result',         to: 'game_pages#battle_result'
 
-  root to: 'game_pages#main'
+  root to: 'game_pages#start'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -1,4 +1,7 @@
 class GamePagesController < ApplicationController
+  def start
+  end
+
   def main
   end
 
@@ -8,6 +11,10 @@ class GamePagesController < ApplicationController
   def battle_select_bylevel
     @players = Player.all
   end
+
+  def battle_select_card
+    @cards = Card.all
+  end 
 
   def battle
   end

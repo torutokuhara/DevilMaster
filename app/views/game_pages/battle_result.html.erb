@@ -1,2 +1,13 @@
-<h1>GamePages#battle_result</h1>
-<p>Find me in app/views/game_pages/battle_result.html.erb</p>
+<div data-role="header" data-position="inline">
+  <h1>バトル結果</h1>
+  <%= link_to "完了", main_path, {"data-icon" => "check", "data-transition" => "slide", "class" => "ui-btn-right"} %>
+</div>
+
+<div style="position:relative", align="center">
+  <br>
+  <%= image_tag("001.jpg") %>
+</div>
+<br>
+<div style="text-align:center">
+  <big><b>勝利！</b><big>
+</div>

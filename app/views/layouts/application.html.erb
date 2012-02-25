@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <%= yield :meta_includes %>
   <head>
     <title>デビルマスター</title>
     <%= stylesheet_link_tag    "application" %>
@@ -8,6 +9,7 @@
     <%= javascript_include_tag "http://code.jquery.com/jquery-1.6.4.js" %>
     <%= javascript_include_tag "http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.js" %>
     <%= yield :javascript_includes %>
+    <%= yield :style_includes %>
     <%= csrf_meta_tags %>
   </head>
   <body>

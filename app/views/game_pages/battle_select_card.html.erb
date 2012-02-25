@@ -3,8 +3,13 @@
 </div>
 
 <ul data-role="listview" data-theme="c">
-  <% @players.each do |player| %>
-    <li><a href=<%= battle_path %>><%= player.name %></a></li>
+  <% @cards.each do |card| %>
+    <li>
+    <a href=<%= battle_path %> id=<%= card.id %>>
+      <%= image_tag(card.image) %>
+      <h3><%= card.name %></h3>
+    </a>
+    </li>
   <% end %>
 </ul>
 

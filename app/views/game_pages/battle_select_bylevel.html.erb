@@ -4,7 +4,7 @@
 
 <ul data-role="listview" data-theme="c">
   <% @players.each do |player| %>
-    <li><a href=<%= battle_path %>><%= player.name %></a></li>
+    <li><a href=<%= battle_select_card_path %>><%= player.name %></a></li>
   <% end %>
 </ul>
 
