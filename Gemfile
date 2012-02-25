@@ -2,10 +2,13 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.1'
 
-gem 'sqlite3'
+group :production, :staging do
+  gem "pg"
+end
 
 group :development do
   gem 'annotate', '~> 2.4.1.beta'
+  gem 'sqlite3-ruby'
 end
 
 group :assets do
