@@ -6,6 +6,7 @@ class GamePagesController < ApplicationController
   end
 
   def battle_select_bylevel
+    @players = Player.all
   end
 
   def battle

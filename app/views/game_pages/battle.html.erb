@@ -1,2 +1,17 @@
-<h1>GamePages#battle</h1>
-<p>Find me in app/views/game_pages/battle.html.erb</p>
+<% content_for :javascript_includes do %>
+  <%= javascript_include_tag("animate") %>
+<% end %>
+
+<div data-role="header">
+  <h1>バトル</h1>
+</div>
+
+<div id="img_l", style="position:relative", align="left">
+  <%= image_tag("togo.jpg") %>
+</div>
+<div id="text", style="position:relative", align="center">
+  <b>vs</b>
+</div>
+<div id="img_r", style="position:relative", align="right">
+  <%= image_tag("togo.jpg") %>
+</div>

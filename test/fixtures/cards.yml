@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  strength: 1
+  image: MyString
+
+two:
+  name: MyString
+  strength: 1
+  image: MyString

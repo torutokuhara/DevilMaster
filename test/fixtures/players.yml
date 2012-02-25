@@ -1,0 +1,23 @@
+# == Schema Information
+#
+# Table name: players
+#
+#  id         :integer         not null, primary key
+#  name       :string(255)
+#  tribe      :string(255)
+#  level      :integer
+#  created_at :datetime        not null
+#  updated_at :datetime        not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  tribe: MyString
+  level: 1
+
+two:
+  name: MyString
+  tribe: MyString
+  level: 1

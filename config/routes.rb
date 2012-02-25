@@ -1,4 +1,6 @@
 Devilmaster::Application.routes.draw do
+  resources :players
+
   match '/main',                  to: 'game_pages#main'
   match '/battle_select',         to: 'game_pages#battle_select'
   match '/battle_select_bylevel', to: 'game_pages#battle_select_bylevel'
