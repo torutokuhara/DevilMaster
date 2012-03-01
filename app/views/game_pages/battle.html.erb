@@ -1,3 +1,8 @@
+<% content_for :javascript_includes do %>
+  <%= javascript_include_tag "jquery.animate-enhanced.js" %>
+  <%= javascript_include_tag "animate.js" %>
+<% end %>
+
 <div data-role="header">
   <h1>バトル</h1>
   <%= link_to "スキップ",

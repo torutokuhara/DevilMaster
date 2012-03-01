@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120225100102) do
+ActiveRecord::Schema.define(:version => 20120301064941) do
 
   create_table "cards", :force => true do |t|
     t.string   "name"
@@ -25,8 +25,10 @@ ActiveRecord::Schema.define(:version => 20120225100102) do
     t.string   "name"
     t.string   "tribe"
     t.integer  "level"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+    t.string   "email"
+    t.string   "password_digest"
   end
 
 end
