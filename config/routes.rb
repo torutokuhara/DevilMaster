@@ -1,15 +1,16 @@
 Devilmaster::Application.routes.draw do
+  root to: 'game#start'
+
+  match '/signup',                          to: 'players#new'
+  match '/start',                           to: 'game#start'
+  match '/main',                            to: 'game#main'
+  match '/battle_select_opponent',          to: 'battle#select_opponent'
+  match '/battle_select_opponent_bylevel',  to: 'battle#select_opponent_bylevel'
+  match '/battle_select_card',              to: 'battle#select_card'
+  match '/battle_execute',                  to: 'battle#execute'
+  match '/battle_result',                   to: 'battle#result'
+
   resources :players
-
-  match '/start',                 to: 'game_pages#start'
-  match '/main',                  to: 'game_pages#main'
-  match '/battle_select',         to: 'game_pages#battle_select'
-  match '/battle_select_bylevel', to: 'game_pages#battle_select_bylevel'
-  match '/battle_select_card',    to: 'game_pages#battle_select_card'
-  match '/battle',                to: 'game_pages#battle'
-  match '/battle_result',         to: 'game_pages#battle_result'
-
-  root to: 'game_pages#start'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

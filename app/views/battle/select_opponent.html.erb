@@ -1,0 +1,17 @@
+<div data-role="header">
+  <h1>バトル相手選択</h1>
+</div>
+
+<div data-role="controlgroup">
+  <%= link_to "エンブレムから選ぶ", "#",
+    {"data-role" => "button", "data-transition" => "slide"}
+  %>
+  <%= link_to "レベルから選ぶ",
+    {"action" => "select_opponent_bylevel", "player" => @player.id},
+    {"data-role" => "button", "data-transition" => "slide"}
+  %>
+  <%= link_to "リベンジバトル", "#",
+    {"data-role" => "button", "data-transition" => "slide"}
+  %>
+</div>
+
