@@ -4,12 +4,12 @@ gem 'rails', '3.2.1'
 gem 'bcrypt-ruby', '3.0.1'
 
 group :production, :staging do
-  gem "pg"
+  # gem "pg"
 end
 
 group :development do
   gem 'annotate', '~> 2.4.1.beta'
-  gem 'sqlite3-ruby'
+  gem 'sqlite3'
 end
 
 group :assets do
@@ -18,5 +18,7 @@ group :assets do
   gem 'uglifier',     '>= 1.0.3'
 end
 
+gem 'therubyracer'
+gem 'execjs'
 gem 'jquery-rails'
 
