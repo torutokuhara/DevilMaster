@@ -6,10 +6,11 @@
     <title>デビルマスター</title>
     <%= stylesheet_link_tag    "application" %>
     <%= stylesheet_link_tag    "http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.css" %>
-    <%= javascript_include_tag "http://code.jquery.com/jquery-1.6.4.js" %>
+    <%= yield :style_includes %>
+    <%= javascript_include_tag "jquery.js" %>
+    <%= javascript_include_tag "jquery_ujs.js" %>
     <%= javascript_include_tag "http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.js" %>
     <%= yield :javascript_includes %>
-    <%= yield :style_includes %>
     <%= csrf_meta_tags %>
   </head>
   <body>

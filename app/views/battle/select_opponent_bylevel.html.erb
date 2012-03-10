@@ -5,7 +5,7 @@
 <ul data-role="listview" data-theme="c">
   <% @players.each do |player| %>
     <li>
-    <%= link_to player.name, :action => "select_card", :controller => "battle", :player => @player.id %>
+    <%= link_to player.name, battle_select_card_path(:opponent_id => player.id) %>
     </li>
   <% end %>
 </ul>

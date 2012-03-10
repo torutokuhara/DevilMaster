@@ -3,6 +3,6 @@ class GameController < ApplicationController
   end
 
   def main
-    @player = Player.find(1)
+    @player = Player.find(current_player)
   end
 end

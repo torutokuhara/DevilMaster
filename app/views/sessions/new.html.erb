@@ -1,0 +1,20 @@
+<div data-role="header">
+  <h1>ログイン</h1>
+</div>
+
+<%= form_for(:session, url: sessions_path) do |f| %>
+  <div class="field">
+    <%= f.label :email, "メール" %>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :password, "パスワード" %>
+    <%= f.password_field :password %>
+  </div>
+  <div>
+    <%= f.submit "開始！" %>
+  </div>
+<% end %>
+
+<p>まだアカウントを持っていない？ <%= link_to "今すぐ登録！", signup_path %></p>
+

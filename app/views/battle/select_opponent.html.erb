@@ -6,12 +6,10 @@
   <%= link_to "エンブレムから選ぶ", "#",
     {"data-role" => "button", "data-transition" => "slide"}
   %>
-  <%= link_to "レベルから選ぶ",
-    {"action" => "select_opponent_bylevel", "player" => @player.id},
+  <%= link_to "レベルから選ぶ", battle_select_opponent_bylevel_path,
     {"data-role" => "button", "data-transition" => "slide"}
   %>
   <%= link_to "リベンジバトル", "#",
     {"data-role" => "button", "data-transition" => "slide"}
   %>
 </div>
-

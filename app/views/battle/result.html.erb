@@ -1,11 +1,14 @@
 <div data-role="header" data-position="inline">
   <h1>バトル結果</h1>
-  <%= link_to "完了", main_path, {"data-icon" => "check", "data-transition" => "slide", "class" => "ui-btn-right"} %>
+  <%=
+    link_to "完了", main_path,
+    {"data-icon" => "check", "data-transition" => "slide", "class" => "ui-btn-right"}
+   %>
 </div>
 
 <div style="position:relative", align="center">
   <br>
-  <%= image_tag(@card_player.image) %>
+  <%= image_tag(@player_card.image) %>
 </div>
 <br>
 <div style="text-align:center">

@@ -1,4 +1,7 @@
 <div data-role="header">
+  <%= link_to "ログアウト", signout_path, 
+    {method: :delete, "data-icon" => "arrow-l", "data-transition" => "slide", "class" => "ui-btn-left"}
+  %>
   <h1>メイン画面</h1>
 </div>
 <div align="center">
@@ -7,11 +10,11 @@
 レベル：<%= @player.level %>
 </div>
 <div data-role="controlgroup">
-  <%= link_to "バトルを開始",
-    {"action" => "select_opponent", "controller" => "battle", "player" => @player.id},
+  <%= link_to "バトルを開始", battle_select_opponent_path,
     {"data-role" => "button", "data-transition" => "slide"}
   %>
   <%= link_to "クエストを開始", "#",
     {"data-role" => "button", "data-transition" => "slide"}
   %>
 </div>
+

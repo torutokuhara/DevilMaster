@@ -6,9 +6,8 @@
   <% @cards.each do |card| %>
     <li>
     <%= link_to raw("#{image_tag(card.image)}<h3>#{card.name}</h3>"),
-      {"action" => "execute", "controller" => "battle", "player" => @player.id, "card_player" => card.id, "card_opponent" => 3}
+      battle_execute_path(:card_id => card.id)
     %>
     </li>
   <% end %>
 </ul>
-

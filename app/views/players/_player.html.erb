@@ -1,0 +1,7 @@
+<li>
+  <%= link_to player.name, player %>
+  <% if current_player.admin? && !current_player?(player) %>
+    | <%= link_to "delete", user, method: :delete, confirm: "You sure?" %>
+  <% end %>
+</li>
+

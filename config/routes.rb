@@ -1,7 +1,10 @@
 Devilmaster::Application.routes.draw do
-  root to: 'game#start'
+  resources :players
+  resources :sessions, only: [:new, :create, :destroy]
 
   match '/signup',                          to: 'players#new'
+  match '/signin',                          to: 'sessions#new'
+  match '/signout',                         to: 'sessions#destroy', via: :delete
   match '/start',                           to: 'game#start'
   match '/main',                            to: 'game#main'
   match '/battle_select_opponent',          to: 'battle#select_opponent'
@@ -10,7 +13,7 @@ Devilmaster::Application.routes.draw do
   match '/battle_execute',                  to: 'battle#execute'
   match '/battle_result',                   to: 'battle#result'
 
-  resources :players
+  root to: 'sessions#new'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

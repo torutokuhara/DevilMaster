@@ -1,5 +1,5 @@
 <div data-role="header">
-  <h1>新しいプレイヤーを作る</h1>
+  <h1>プレイヤー情報を更新する</h1>
 </div>
 
 <%= form_for(@player) do |f| %>
@@ -9,7 +9,7 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :email, "メールアドレス" %>
+    <%= f.label :email, "メール" %>
     <%= f.text_field :email %>
   </div>
   <div class="field">
@@ -21,7 +21,7 @@
     <%= f.password_field :password_confirmation %>
   </div>
   <div class="actions">
-    <%= f.submit "登録" %>
+    <%= f.submit "更新" %>
   </div>
 <% end %>
 
