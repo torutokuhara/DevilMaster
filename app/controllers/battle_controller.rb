@@ -31,7 +31,7 @@ class BattleController < ApplicationController
 
   def execute 
     session[:player_card_id] = params[:card_id]
-    session[:opponent_card_id] = 1
+    session[:opponent_card_id] = 2 
     set_state
  end
 

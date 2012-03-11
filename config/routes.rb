@@ -7,6 +7,8 @@ Devilmaster::Application.routes.draw do
   match '/signout',                         to: 'sessions#destroy', via: :delete
   match '/start',                           to: 'game#start'
   match '/main',                            to: 'game#main'
+  match '/level_up',                        to: 'game#level_up'
+  match '/card_get',                        to: 'game#card_get'
   match '/battle_select_opponent',          to: 'battle#select_opponent'
   match '/battle_select_opponent_bylevel',  to: 'battle#select_opponent_bylevel'
   match '/battle_select_card',              to: 'battle#select_card'
